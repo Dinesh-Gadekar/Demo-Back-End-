@@ -1,6 +1,6 @@
 let { tasks, nextId } = require('../data/taskData');
 
-// Create Task
+
 const createTaskController = async (req, res) => {
     try {
         const { title, description } = req.body;
@@ -31,7 +31,7 @@ const createTaskController = async (req, res) => {
     }
 };
 
-// Get All Tasks
+
 const getAllTaskController = async (req, res) => {
     try {
         res.status(200).send({
@@ -47,7 +47,7 @@ const getAllTaskController = async (req, res) => {
     }
 };
 
-// Get Single Task by ID
+
 const getSingleTaskController = async (req, res) => {
     try {
         const task = tasks.find(t => t.id === parseInt(req.params.id));
@@ -71,7 +71,7 @@ const getSingleTaskController = async (req, res) => {
     }
 };
 
-// Update Task
+
 const updateTaskController = async (req, res) => {
     try {
         const { title, description } = req.body;
@@ -107,7 +107,7 @@ const updateTaskController = async (req, res) => {
     }
 };
 
-// Delete Task
+
 const deleteTaskController = async (req, res) => {
     try {
         const id = parseInt(req.params.id);
