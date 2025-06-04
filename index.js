@@ -13,7 +13,7 @@ dotenv.config();
 
 app.use('/task', taskRoutes);
 
-// Home Route
+
 app.get('/', (req, res) => {
   res.send('Osumare Task API is running!');
 });
